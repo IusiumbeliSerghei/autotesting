@@ -1,0 +1,21 @@
+# Java / Maven
+target/
+*.class
+*.jar
+*.war
+
+# IDE
+.idea/
+*.iml
+.vscode/
+*.swp
+
+# Logs
+target/logs/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# !! SECRETS – never commit real credentials !!
+src/test/resources/config.properties

@@ -1,0 +1,16 @@
+# ──────────────────────────────────────────────
+#  GitHub API Test Framework – Configuration
+#  Copy this file to config.properties and fill in your values.
+#  config.properties is in .gitignore and will NEVER be committed.
+# ──────────────────────────────────────────────
+
+# GitHub API base URL (do not change)
+base.url=https://api.github.com
+
+# Your GitHub Personal Access Token
+# Required scopes: repo, delete_repo
+# Create at: https://github.com/settings/tokens
+github.token=YOUR_GITHUB_TOKEN_HERE
+
+# Your GitHub account username (login)
+github.username=YOUR_GITHUB_USERNAME_HERE

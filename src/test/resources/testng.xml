@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+
+<!--
+    GitHub REST API – Regression Test Suite
+    Run with: mvn test
+    Reports:  target/surefire-reports/
+-->
+<suite name="GitHub API Regression Suite" verbose="2" parallel="false">
+
+    <!-- ── 1. Authorization ── -->
+    <test name="Authorization Tests">
+        <classes>
+            <class name="com.github.api.tests.AuthTest"/>
+        </classes>
+    </test>
+
+    <!-- ── 2. Full resource lifecycle: POST → GET → PATCH → DELETE → 404 ── -->
+    <test name="Repository Lifecycle Tests">
+        <classes>
+            <class name="com.github.api.tests.RepositoryLifecycleTest"/>
+        </classes>
+    </test>
+
+    <!-- ── 3. HTTP Headers validation ── -->
+    <test name="Header Validation Tests">
+        <classes>
+            <class name="com.github.api.tests.HeadersTest"/>
+        </classes>
+    </test>
+
+    <!-- ── 4. Negative scenarios ── -->
+    <test name="Negative Tests">
+        <classes>
+            <class name="com.github.api.tests.NegativeTest"/>
+        </classes>
+    </test>
+
+    <!-- ── 5. Parameterized tests using DataProvider ── -->
+    <test name="Parameterized Tests">
+        <classes>
+            <class name="com.github.api.tests.ParameterizedRepoTest"/>
+        </classes>
+    </test>
+
+</suite>
